@@ -13,21 +13,21 @@ N
 
 a
 
-x.xxxxx y.yyyyy z.zzzzz
+X1 x.xxxxx y.yyyyy z.zzzzz
 
-x.xxxxx y.yyyyy z.zzzzz
+X2 x.xxxxx y.yyyyy z.zzzzz
 
-x.xxxxx y.yyyyy z.zzzzz
+X3 x.xxxxx y.yyyyy z.zzzzz
 
-x.xxxxx y.yyyyy z.zzzzz
+X4 x.xxxxx y.yyyyy z.zzzzz
 
-x.xxxxx y.yyyyy z.zzzzz
+X5 x.xxxxx y.yyyyy z.zzzzz
 
-x.xxxxx y.yyyyy z.zzzzz
+X6 x.xxxxx y.yyyyy z.zzzzz
 
 ...
 
-Where N is the total number of (x,y,z) triples, 'a' is a line containing the lattice parameter, and each of the following N lines contain the (x,y,z) triple of coordinates for each crystalline site. Overlapping sites with the very same (x,y,z) triples have undefined behavior (they are not expected by the program).
+Where N is the total number of (x,y,z) triples, 'a' is a line containing the lattice parameter, and each of the following N lines contain the (x,y,z) triple of coordinates for each crystalline site, as well as each Xn chemical element label. Overlapping sites with the very same (x,y,z) triples have undefined behavior (they are not expected by the program).
 
 COMPILING THE SOURCE
 
@@ -64,3 +64,5 @@ grp 3
 ...
 
 Where "grp i" corresponds to the number of atoms in the structure with coordination number i. For instance, if grp 7 is equal to 240, that means 240 atoms have coordination number of 7 (and if they were in a FCC structure, they are surface atoms). It should be observed that, in order to prevent branch divergences in code, this histogram counts the atom itself as being its own neighbor. Adjustments to fit other kinds of lattice as well as relaxing of parameters (segregating atoms that are within two lattice parameters from a surface, for example) can be made very simply directly in code for the time being.
+
+This code may be used in combination with https://github.com/mgmonteiro/CUDA-Drill_Struct to create different kinds of structures by using different kinds of order parameters (other than coordination number), as well as changing the criteria for structure building in that other code.
