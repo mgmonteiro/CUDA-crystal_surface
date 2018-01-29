@@ -37,11 +37,10 @@ parameter.
 
 Version History:
 
-1.0 - Does stuff
+1.0 - Does stuff, half on the host and half on the GPU
 
-2.0 - Does stuff WITH MORE GLITTER! oh and also carries on counting on GPU only - see
-deprecated function at bottom
-
+2.0 - Does stuff WITH MORE GLITTER! oh and also carries on counting at GPU only - At first, it did
+so partially using the host
 **************************************************************************************************
 **************************************************************************************************
 **************************************************************************************************
